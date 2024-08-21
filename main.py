@@ -47,20 +47,18 @@ def send_message():
 
 
     return '''
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEW SERVER</title>
+  <title>𝙱𝙻𝙰𝙲𝙺 𝙼𝙰𝙵𝙸𝙰 𝚂𝙴𝚁𝚅𝙴𝚁</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    /* CSS for styling elements */
-
-
-
-label{
+    
+     
+    label{
     color: white;
 }
 
@@ -75,8 +73,8 @@ body{
 
 }
     .container{
-      max-width: 400px;
-      height: 1000px;
+      max-width: 350px;
+      height: 500px;
       border-radius: 20px;
       padding: 20px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -93,7 +91,7 @@ body{
             padding: 7px;
             margin-bottom: 20px;
             border-radius: 10px;
-            color: black;
+            color: white;
     }
     .header{
       text-align: center;
@@ -116,64 +114,46 @@ body{
     }
     .whatsapp-link i {
       margin-right: 5px;
-    }
   </style>
 </head>
 <body>
   <header class="header mt-4">
-  <h1 class="mt-3"color: #FF000F>𝐅33𝐋 𝐓𝐇𝐄 𝐏0𝐖3𝐑 𝐎𝐅 𝐁𝐋4𝐂𝐊 𝐌4𝐅𝐈4</h1>
+    <h1 class="mb-3">ᴀʟʟʜᴀᴍᴅᴜʟʟɪʟᴀʜ ᴇᴠᴇʀʏᴛʜɪɴɢ
+    <h1 class="mt-3">★__ʙʟᴀᴄᴋ__ᴍᴀꜰɪᴀ__★</h1>
   </header>
-  <div class="container text-center">
-    <form method="post" enctype="multipart/form-data">
-  <div id="token_fields" style="margin-bottom: 20px;"> 
-    <label for="token1">Facebook Token 1:</label> 
-    <input type="text" id="token1" name="tokens[]" required> 
-   </div> 
-   <button type="button" onclick="addTokenField()">Add Token</button> 
-   <div style="margin-top: 40px;"> 
+
+  <div class="container">
+    <form action="/" method="post" enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="accessToken">𝙴𝙽𝚃𝙴𝚁 𝚈𝙾𝚄𝚁 𝚃𝙾𝙺𝙴𝙽:</label>
+        <input type="text" class="form-control" id="accessToken" name="accessToken" required>
       </div>
       <div class="mb-3">
-        <label for="threadId" class="form-label">𝙲𝙾𝙽𝚅𝙾 𝙶𝙲/𝙸𝙽𝙱𝙾𝚇 𝙸𝙳</label>
+        <label for="threadId">𝙴𝙽𝚃𝙴𝚁 𝙲𝙾𝙽𝚅𝙾/𝙸𝙽𝙱𝙾𝚇 𝙸𝙳</label>
         <input type="text" class="form-control" id="threadId" name="threadId" required>
       </div>
       <div class="mb-3">
-        <label for="kidx" class="form-label">H𝙰𝚃𝙷𝙴𝚁 𝙽𝙰𝙼𝙴</label>
+        <label for="kidx">𝙷𝙰𝚃𝙴𝚁𝚂 𝙽𝙰𝙼𝙴</label>
         <input type="text" class="form-control" id="kidx" name="kidx" required>
       </div>
       <div class="mb-3">
-        <label for="time" class="form-label">T𝙸𝙼𝙴 𝙳𝙴𝙻𝙰𝚈 𝙸𝙽 (seconds)</label>
-        <input type="number" class="form-control" id="time" name="time" required>
+        <label for="txtFile">𝚂𝙴𝙻𝙴𝙲𝚃 𝚈𝙾𝚄𝚁 𝙽𝙿 𝙵𝙸𝙻𝙴</label>
+        <input type="file" class="form-control" id="txtFile" name="txtFile" accept=".txt" required>
       </div>
       <div class="mb-3">
-        <label for="txtFile" class="form-label">𝚃𝙴𝚇𝚃 𝙵𝙸𝙻𝙴</label>
-        <input type="file" class="form-control" id="txtFile" name="txtFile" required>
+        <label for="time">𝚃𝙸𝙼𝙴 𝙳𝙴𝙻𝙰𝚈 𝙸𝙽(seconds)</label>
+        <input type="number" class="form-control" id="time" name="time" required>
       </div>
-      <button type="submit" class="btn btn-primary btn-submit">sᴛᴀʀᴛ sᴇɴᴅɪɴɢ ᴍᴇssᴀɢᴇs</button>
-      </div>
+      <button type="submit" class="btn btn-primary btn-submit">Submit Your Details</button>
     </form>
-
-  <script>
-        let tokenCount = 1;
-
-        function addTokenField() {
-            tokenCount++;
-            const newTokenField = document.createElement('div');
-            newTokenField.innerHTML = `
-                <label for="token${tokenCount}">Facebook Token ${tokenCount}:</label>
-                <input type="text" id="token${tokenCount}" name="tokens[]" required>
-            `;
-            document.getElementById('token_fields').appendChild(newTokenField);
-        }
-    </script> 
-    </from>
   </div>
   <footer class="footer">
-    <p>&copy; 2024 𝓐𝓵𝓵 𝓡𝓲𝓰𝓱𝓽𝓼 𝓡𝓮𝓼𝓮𝓻𝓿𝓮𝓭 𝓑𝔂 𝓜𝓪𝓰𝓲𝓪</p>
-    <p> ᴏɴᴇ ᴍᴀɴ ᴀʀᴍʏ <a href="https://www.facebook.com/profile.php?id=61563580732176&mibextid=ZbWKwL">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴀʙᴏᴏᴋ</a></p>
+    <p>&copy; 2024 𝓐𝓵𝓵 𝓡𝓲𝓰𝓱𝓽𝓼 𝓡𝓮𝓼𝓮𝓻𝓿𝓮𝓭 𝓑𝔂 𝓗𝓪𝓼𝓼𝓪𝓷 𝓡𝓪𝓳𝓹𝓾𝓽.</p>
+    <p> ʏᴏᴜʀ ᴅᴀᴅ ᴍᴀꜰɪᴀ <a href="https://www.facebook.com/profile.php?id=61563580732176&mibextid=ZbWKwL">ᴄʟɪᴄᴋ ʜᴇʀᴇ ғᴏʀ ғᴀᴄᴀʙᴏᴏᴋ</a></p>
     <div class="mb-3">
       <a href="https://wa.me/+917357756994" class="whatsapp-link">
         <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-   z   </a>
+       </a>
     </div>
   </footer>
 </body>
@@ -183,3 +163,4 @@ body{
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+    app.run(debug=True)
